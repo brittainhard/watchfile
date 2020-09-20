@@ -22,9 +22,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include <stdlib.h>
 #include <sys/inotify.h>
 #include <unistd.h>
-#include <string.h>
-
-/* Read all available inotify events from the file descriptor 'fd'.
+#include <string.h> /* Read all available inotify events from the file descriptor 'fd'.
   wd is the table of watch descriptors for the directories in argv.
   argc is the length of wd and argv.
   argv is the list of watched directories.
@@ -41,7 +39,7 @@ handle_events(int fd, int *wd, int argc, char* argv[])
 
    /**
     * int fd - file descriptor of an inotify_event
-    * int *wd
+    * int *wd 
     */
 
    /**
@@ -219,4 +217,3 @@ main(int argc, char* argv[])
    free(wd);
    exit(EXIT_SUCCESS);
 }
-
